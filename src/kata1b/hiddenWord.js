@@ -1,48 +1,47 @@
 const maxNum = 999999
 const minNum = 100
-// ["o", "b", "l", "i", "e", "t", "a", "d", "n", "m"]
 
 export function hiddenWord(num) {
   if (isNotInRange(num)) {
     return false
   }
-  let clave = ""
+  let key = ""
   let stringNum = num.toString()
   for (let i = 0; i < stringNum.length; i++) {
     switch (stringNum[i]) {
       case "0":
-        clave += "o"
+        key += "o"
         break
       case "1":
-        clave += "b"
+        key += "b"
         break
       case "2":
-        clave += "l"
+        key += "l"
         break
       case "3":
-        clave += "i"
+        key += "i"
         break
       case "4":
-        clave += "e"
+        key += "e"
         break
       case "5":
-        clave += "t"
+        key += "t"
         break
       case "6":
-        clave += "a"
+        key += "a"
         break
       case "7":
-        clave += "d"
+        key += "d"
         break
       case "8":
-        clave += "n"
+        key += "n"
         break
       case "9":
-        clave += "m"
+        key += "m"
         break
     }
   }
-  return clave
+  return key
 }
 
 function isNotInRange(num) {
